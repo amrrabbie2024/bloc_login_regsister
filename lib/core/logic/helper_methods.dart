@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 final navigtorKey=GlobalKey<NavigatorState>();
@@ -19,6 +20,28 @@ void showMessage(String msg,{bool isSucess=false}){
 
         content: Center(child: Text(msg))));
   }
+}
+
+void showProgressDialog(String? msg) {
+  showDialog(
+      context: navigtorKey.currentContext!,
+      builder: (context) {
+        Future.delayed(Duration(milliseconds: 1500), () {
+          Navigator.of(context).pop(true);
+        });
+        return AlertDialog(
+          title: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircularProgressIndicator(),
+              SizedBox(height: 8.h,),
+              Text(msg!, style: TextStyle(color: Theme
+                  .of(context)
+                  .primaryColor, fontWeight: FontWeight.bold, fontSize: 21),),
+            ],
+          ),
+        );
+      });
 }
 
 /*Future uploadImageToApi(XFile img) async {

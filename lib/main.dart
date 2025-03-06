@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_regsister/core/logic/cash_helper.dart';
 import 'package:flutter_login_regsister/core/logic/get_it.dart';
@@ -6,6 +7,7 @@ import 'package:flutter_login_regsister/core/logic/kiwi.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/logic/helper_methods.dart';
+import 'firebase_options.dart';
 import 'views/login/view.dart';
 import 'views/splash/view.dart';
 
@@ -18,6 +20,10 @@ Future<void> main() async {
   initGetIt();
 
   initKiwi();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(
     EasyLocalization(

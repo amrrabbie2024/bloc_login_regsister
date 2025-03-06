@@ -1,4 +1,5 @@
 import 'package:flutter_login_regsister/features/login/bloc.dart';
+import 'package:flutter_login_regsister/features/movies/bloc.dart';
 import 'package:flutter_login_regsister/features/regsister/bloc.dart';
 import 'package:kiwi/kiwi.dart';
 
@@ -7,4 +8,5 @@ void initKiwi(){
 
   kiwi.registerFactory((container) => LoginBloc());
   kiwi.registerFactory((container) => RegsisterBloc());
+  kiwi.registerFactory((container) => MoviesBloc());
 }

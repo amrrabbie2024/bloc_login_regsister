@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "659782950024",
+    "project_id": "flutter-login-regsister",
+    "storage_bucket": "flutter-login-regsister.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659782950024:android:9ebdb236720e62ced7533d",
+        "android_client_info": {
+          "package_name": "net.amr.flutter_login_regsister"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRbwGH_UHYkg0eNuGPZljaKW9DlP9fYYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
